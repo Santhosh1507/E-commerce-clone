@@ -1,4 +1,4 @@
-
+import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -15,6 +15,7 @@ export const addToCart = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ userId, productId, quantity }),
+      withcreadentials: true,
     });
 
     if (!response.ok) {

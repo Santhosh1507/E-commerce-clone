@@ -28,6 +28,7 @@ export const addFeatureImage = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ image }),
+      withcredentials: true,
     });
 
     if (!response.ok) {

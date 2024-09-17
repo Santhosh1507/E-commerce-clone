@@ -17,6 +17,7 @@ export const addNewProduct = createAsyncThunk(
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        withcredentials: true,
       }
     );
     if (!response.ok) {
@@ -50,6 +51,7 @@ export const editProduct = createAsyncThunk(
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        withcredentials: true,
       }
     );
     if (!response.ok) {

@@ -14,6 +14,7 @@ export const addNewAddress = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
+      withcreadentials: true,
     });
 
     if (!response.ok) {
@@ -46,6 +47,7 @@ export const editAddress = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
+      withcreadentials: true,
     });
 
     if (!response.ok) {

@@ -18,7 +18,6 @@ export const createNewOrder = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(orderData),
-      withcreadentials: true,
     });
 
     if (!response.ok) {
@@ -38,7 +37,6 @@ export const capturePayment = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ paymentId, payerId, orderId }),
-      withcreadentials: true,
     });
 
     if (!response.ok) {

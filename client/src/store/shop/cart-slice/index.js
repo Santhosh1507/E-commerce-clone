@@ -15,7 +15,6 @@ export const addToCart = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ userId, productId, quantity }),
-      withcreadentials: true,
     });
 
     if (!response.ok) {

@@ -16,7 +16,6 @@ export const registerUser = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-      withcredentials: true, // equivalent to withCredentials: true
     });
 
     if (!response.ok) {
@@ -36,7 +35,6 @@ export const loginUser = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-      withcredentials: true, // equivalent to withCredentials: true
     });
 
     if (!response.ok) {
@@ -55,7 +53,6 @@ export const logoutUser = createAsyncThunk(
       headers: {
         "Content-Type": "application/json",
       },
-      withcredentials: true, // equivalent to withCredentials: true
     });
 
     if (!response.ok) {
@@ -74,7 +71,7 @@ export const checkAuth = createAsyncThunk(
       headers: {
         "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
       },
-      withcredentials: true, // equivalent to withCredentials: true
+
     });
 
     if (!response.ok) {

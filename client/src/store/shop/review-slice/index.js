@@ -17,7 +17,6 @@ export const addReview = createAsyncThunk(
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formdata),
-        withcreadentials: true,
       }
     );
 

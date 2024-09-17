@@ -41,7 +41,6 @@ export const updateOrderStatus = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ orderStatus }),
-      withcredentials: true,
     });
     if (!response.ok) {
       throw new Error("Failed to update order status");

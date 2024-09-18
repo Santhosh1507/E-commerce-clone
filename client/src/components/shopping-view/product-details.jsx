@@ -106,26 +106,18 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
-      <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]">
+      <DialogContent className="grid grid-cols-2 gap-8 sm:p-10 max-w-[90vw] max-h-[90vh]  sm:max-w-[80vw] lg:max-w-[70vw]">
         <div className="relative overflow-hidden rounded-lg">
           <img
             src={productDetails?.image}
             alt={productDetails?.title}
-            width={600}
-            height={600}
-            className="aspect-square w-full object-cover"
+            width={400}
+            height={400}
+            className="aspect-square w-full h-3/6 object-cover"
           />
-        </div>
-        <div className="">
-          <div>
-            <h1 className="text-3xl font-extrabold">{productDetails?.title}</h1>
-            <p className="text-muted-foreground text-2xl mb-5 mt-4">
-              {productDetails?.description}
-            </p>
-          </div>
           <div className="flex items-center justify-between">
             <p
-              className={`text-3xl font-bold text-primary ${
+              className={`text-2xl font-bold text-primary ${
                 productDetails?.salePrice > 0 ? "line-through" : ""
               }`}
             >
@@ -164,6 +156,17 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
               </Button>
             )}
           </div>
+        </div>
+        <div className="">
+          <div className="max-h-[300px] overflow-auto">
+            <h1 className="text-2xl font-extrabold">{productDetails?.title}</h1>
+            <p className="text-muted-foreground text-xl mb-5 mt-4">
+              {productDetails?.description}
+            </p>
+          </div>
+          
+          
+          
           <Separator />
           <div className="max-h-[300px] overflow-auto">
             <h2 className="text-xl font-bold mb-4">Reviews</h2>

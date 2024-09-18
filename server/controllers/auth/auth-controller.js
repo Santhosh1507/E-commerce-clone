@@ -68,7 +68,7 @@ export const loginUser = async (req, res) => {
       { expiresIn: "60m" }
     );
 
-    res.cookie("token", token, { httpOnly: true, secure: false }).json({
+    res.cookie("token", token, { httpOnly: true, secure: true }).json({
       success: true,
       message: "Logged in successfully",
       user: {
@@ -78,7 +78,7 @@ export const loginUser = async (req, res) => {
         userName: checkUser.userName,
       },
     });
-  } catch (e) {
+  } catch (e) { 
     console.log(e);
     res.status(500).json({
       success: false,

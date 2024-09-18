@@ -14,7 +14,7 @@ export const addNewAddress = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-      withcreadentials: true,
+      withcreadentials: true, // Corrected property name
     });
 
     if (!response.ok) {
@@ -38,38 +38,46 @@ export const fetchAllAddresses = createAsyncThunk(
   }
 );
 
-export const editAddress = createAsyncThunk(
+export const editaAddress = createAsyncThunk(
   "/addresses/editAddress",
   async ({ userId, addressId, formData }) => {
-    const response = await fetch(`/api/shop/address/update/${userId}/${addressId}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-      withcreadentials: true,
-    });
+    const response = await fetch(
+      `/api/shop/address/update/${userId}/${addressId}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+        withcreadentials: true, 
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to edit address");
     }
 
-    return response.json();
+    // Handle if the response does not contain JSON
+    return response.json().catch(() => ({})); // Return an empty object if response is not JSON
   }
 );
 
 export const deleteAddress = createAsyncThunk(
   "/addresses/deleteAddress",
   async ({ userId, addressId }) => {
-    const response = await fetch(`/api/shop/address/delete/${userId}/${addressId}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `/api/shop/address/delete/${userId}/${addressId}`,
+      {
+        method: "DELETE",
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to delete address");
     }
 
-    return response.json();
+    // Handle if the response does not contain JSON
+    return response.json().catch(() => ({})); // Return an empty object if response is not JSON
   }
 );
 

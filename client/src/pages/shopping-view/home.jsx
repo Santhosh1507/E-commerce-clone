@@ -1,7 +1,4 @@
 import { Button } from "@/components/ui/button";
-import bannerOne from "../../assets/banner-1.webp";
-import bannerTwo from "../../assets/banner-2.webp";
-import bannerThree from "../../assets/banner-3.webp";
 import {
   Airplay,
   BabyIcon,
@@ -15,7 +12,17 @@ import {
   ShoppingBasket,
   UmbrellaIcon,
   WashingMachine,
+  TabletSmartphone,
   WatchIcon,
+  Apple,
+  Tv,
+  MonitorPlay,
+  Clapperboard,
+  LaptopMinimal,
+  Smartphone,
+  PhilippinePeso,
+  Camera,
+  MonitorSmartphone,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
@@ -37,6 +44,8 @@ const categoriesWithIcon = [
   { id: "kids", label: "Kids", icon: BabyIcon },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
   { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "electronics", label: "Electronics", icon: WashingMachine  },
+  { id: "mobile", label: "Mobile", icon: TabletSmartphone  },
 ];
 
 const brandsWithIcon = [
@@ -46,6 +55,15 @@ const brandsWithIcon = [
   { id: "levi", label: "Levi's", icon: Airplay },
   { id: "zara", label: "Zara", icon: Images },
   { id: "h&m", label: "H&M", icon: Heater },
+  { id: "apple", label: "Apple", icon: Apple },
+  { id: "samsung", label: "Samsung", icon: Tv },
+  { id: "sony", label: "Sony", icon: MonitorPlay },
+  { id: "lg", label: "LG", icon: Clapperboard },
+  { id: "lenovo", label: "Lenovo", icon: LaptopMinimal },
+  { id: "xiaomi", label: "Xiaomi", icon: Smartphone },
+  { id: "philips", label: "Philips", icon: PhilippinePeso },
+  { id: "nikon", label: "Nikon", icon: Camera },
+  { id: "onePlus", label: "OnePlus", icon: MonitorSmartphone },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);

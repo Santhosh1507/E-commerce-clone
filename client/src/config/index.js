@@ -63,6 +63,8 @@ export const addProductFormElements = [
       { id: "kids", label: "Kids" },
       { id: "accessories", label: "Accessories" },
       { id: "footwear", label: "Footwear" },
+      { id: "electronics", label: "Electronics" },
+      { id: "mobile", label: "Mobile" },
     ],
   },
   {
@@ -76,6 +78,15 @@ export const addProductFormElements = [
       { id: "levi", label: "Levi's" },
       { id: "zara", label: "Zara" },
       { id: "h&m", label: "H&M" },
+      { id: "apple", label: "Apple" },
+      { id: "samsung", label: "Samsung" },
+      { id: "sony", label: "Sony" },
+      { id: "lg", label: "LG" },
+      { id: "lenovo", label: "Lenovo" },
+      { id: "xiaomi", label: "Xiaomi" },
+      { id: "philips", label: "Philips" },
+      { id: "nikon", label: "Nikon" },
+      { id: "onePlus", label: "OnePlus" },
     ],
   },
   {
@@ -138,6 +149,16 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
+    id: "electronics",
+    label: "Electronics",
+    path: "/shop/listing",
+  },
+  {
+    id: "mobile",
+    label: "Mobile",
+    path: "/shop/listing",
+  },
+  {
     id: "search",
     label: "Search",
     path: "/shop/search",
@@ -168,6 +189,8 @@ export const filterOptions = {
     { id: "kids", label: "Kids" },
     { id: "accessories", label: "Accessories" },
     { id: "footwear", label: "Footwear" },
+    { id: "electronics", label: "Electronics" },
+    { id: "mobile", label: "Mobile" },
   ],
   brand: [
     { id: "nike", label: "Nike" },
@@ -176,6 +199,15 @@ export const filterOptions = {
     { id: "levi", label: "Levi's" },
     { id: "zara", label: "Zara" },
     { id: "h&m", label: "H&M" },
+    { id: "apple", label: "Apple" },
+    { id: "samsung", label: "Samsung" },
+    { id: "sony", label: "Sony" },
+    { id: "lg", label: "LG" },
+    { id: "lenovo", label: "Lenovo" },
+    { id: "xiaomi", label: "Xiaomi" },
+    { id: "philips", label: "Philips" },
+    { id: "nikon", label: "Nikon" },
+    { id: "onePlus", label: "OnePlus" },
   ],
 };
 

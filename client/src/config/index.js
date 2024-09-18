@@ -171,6 +171,8 @@ export const categoryOptionsMap = {
   kids: "Kids",
   accessories: "Accessories",
   footwear: "Footwear",
+  electronics: "Electronics",
+  mobile: "Mobile",
 };
 
 export const brandOptionsMap = {
@@ -180,6 +182,15 @@ export const brandOptionsMap = {
   levi: "Levi",
   zara: "Zara",
   "h&m": "H&M",
+  apple: "Apple",
+  samsung: "Samsung",
+  sony: "Sony",
+  lg: "LG",
+  lenovo: "Lenovo",
+  xiaomi: "Xiaomi",
+  philips: "Philips",
+  nikon: "Nikon",
+  onePlus: "OnePlus",
 };
 
 export const filterOptions = {
